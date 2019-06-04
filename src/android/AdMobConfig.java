@@ -30,6 +30,8 @@ public class AdMobConfig {
     public static final String OPT_TEST_DEVICES = "testDevices";
 
     private static final String OPT_LOCATION = "location";
+    
+     private static final String OPT_USER_ID= "userId";
 
     private static final String OPT_GENDER = "gender";
     private static final String OPT_FORCHILD = "forChild";
@@ -54,6 +56,8 @@ public class AdMobConfig {
     public List<String> testDeviceList = null;
 
     public Location location = null;
+    
+    public String userId = null;
 
     // Banner
     private static final String TEST_BANNER_ID = "ca-app-pub-3940256099942544/6300978111";
@@ -81,6 +85,10 @@ public class AdMobConfig {
     public void setOptions(JSONObject options) {
         if (options == null) {
             return;
+        }
+        
+         if (options.has(OPT_USER_ID)) {
+            this.userId = options.optString(OPT_USER_ID);
         }
 
         if (options.has(OPT_PUBLISHER_ID)) {
@@ -243,6 +251,10 @@ public class AdMobConfig {
         return rewardVideoId;
     }
 
+    public String getUserId() {
+        return userId;
+    }
+    
     private static boolean isEmptyAdUnitId(String adId) {
         return adId.length() == 0 || adId.indexOf("xxxx") > 0;
     }
