@@ -51,7 +51,7 @@ public class RewardVideoExecutor extends AbstractExecutor {
                   Log.w("testId", plugin.config.getUserId());
                 
                 rewardedVideoAd.setUserId(plugin.config.getUserId());
-                //rewardedVideoAd.setCustomData(plugin.config.getUserId());
+                rewardedVideoAd.setCustomData(plugin.config.getUserId());
 
                 synchronized (rewardedVideoLock) {
                     if (!isRewardedVideoLoading) {
