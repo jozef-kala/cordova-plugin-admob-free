@@ -33,8 +33,7 @@
 
         <framework src="com.google.android.gms:play-services-base:16.1.0" />
         <framework src="com.google.android.gms:play-services-ads:17.2.1" />
-          <framework src="com.google.android.gms:play-services-identity:+" />
-    <framework src="com.google.android.gms:play-services-auth:+" />
+
         
         <config-file parent="/manifest/application" target="AndroidManifest.xml">
             <activity android:name="com.google.android.gms.ads.AdActivity"
